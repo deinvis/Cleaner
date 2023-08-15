@@ -1,0 +1,17 @@
+/mnt/chromeos/removable/Jogos HDD/aba
+/mnt/chromeos/removable/Dados/aba
+/mnt/chromeos/removable/Dados/aba1
+/mnt/chromeos/removable/Dados/aba2
+/mnt/chromeos/removable/Dados/aba3
+/mnt/chromeos/removable/Dados/aba4
+/mnt/chromeos/removable/Dados/aba5
+/mnt/chromeos/removable/Dados/aba6
+/mnt/chromeos/removable/Dados/aba7
+/mnt/chromeos/removable/Dados/aba8
+/mnt/chromeos/removable/Dados/aba9
+/mnt/chromeos/removable/Dados/aba10
+/mnt/chromeos/removable/Dados/aba11
+/mnt/chromeos/removable/Dados/aba12
+/mnt/chromeos/removable/Dados/aba13
+/mnt/chromeos/removable/Dados/aba14
+/mnt/chromeos/removable/Dados/aba15

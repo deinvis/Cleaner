@@ -1,0 +1,184 @@
+[
+    {
+        "label": "PIL",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PIL",
+        "description": "PIL",
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageFilter",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "UnidentifiedImageError",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "UnidentifiedImageError",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "DecompressionBombWarning",
+        "importPath": "PIL.Image",
+        "description": "PIL.Image",
+        "isExtraImport": true,
+        "detail": "PIL.Image",
+        "documentation": {}
+    },
+    {
+        "label": "DecompressionBombWarning",
+        "importPath": "PIL.Image",
+        "description": "PIL.Image",
+        "isExtraImport": true,
+        "detail": "PIL.Image",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "pastas",
+        "kind": 2,
+        "importPath": "main-w",
+        "description": "main-w",
+        "peekOfCode": "def pastas():\n    #array = []\n    array = [\"EPF/\"]\n    return array\ndef imageVerify(name):\n    return name.__contains__(\".png\") or name.__contains__(\".png\") or name.__contains__(\".jpg\") or name.__contains__(\n        \".jpeg\") or name.__contains__(\".webp\") or name.__contains__(\".jfif\") or name.__contains__(\n        \".tiff\") or name.__contains__(\".bmp\")\npastas = pastas()\ndeleteFilesCount = 0",
+        "detail": "main-w",
+        "documentation": {}
+    },
+    {
+        "label": "imageVerify",
+        "kind": 2,
+        "importPath": "main-w",
+        "description": "main-w",
+        "peekOfCode": "def imageVerify(name):\n    return name.__contains__(\".png\") or name.__contains__(\".png\") or name.__contains__(\".jpg\") or name.__contains__(\n        \".jpeg\") or name.__contains__(\".webp\") or name.__contains__(\".jfif\") or name.__contains__(\n        \".tiff\") or name.__contains__(\".bmp\")\npastas = pastas()\ndeleteFilesCount = 0\nfor pasta in pastas:\n    for diretorio, subpastas, arquivos in os.walk(pasta):\n        print(f\"Pasta: {diretorio}\\nTotal de arquivos = {len(arquivos)}\")\n        for arquivo in arquivos:",
+        "detail": "main-w",
+        "documentation": {}
+    },
+    {
+        "label": "pastas",
+        "kind": 5,
+        "importPath": "main-w",
+        "description": "main-w",
+        "peekOfCode": "pastas = pastas()\ndeleteFilesCount = 0\nfor pasta in pastas:\n    for diretorio, subpastas, arquivos in os.walk(pasta):\n        print(f\"Pasta: {diretorio}\\nTotal de arquivos = {len(arquivos)}\")\n        for arquivo in arquivos:\n            if not arquivo.__contains__('.encrypted') and not arquivo.__contains__('.part') and imageVerify(arquivo):\n                try:\n                    im = Image.open(diretorio + '/' + arquivo)\n                    altura = im.height",
+        "detail": "main-w",
+        "documentation": {}
+    },
+    {
+        "label": "deleteFilesCount",
+        "kind": 5,
+        "importPath": "main-w",
+        "description": "main-w",
+        "peekOfCode": "deleteFilesCount = 0\nfor pasta in pastas:\n    for diretorio, subpastas, arquivos in os.walk(pasta):\n        print(f\"Pasta: {diretorio}\\nTotal de arquivos = {len(arquivos)}\")\n        for arquivo in arquivos:\n            if not arquivo.__contains__('.encrypted') and not arquivo.__contains__('.part') and imageVerify(arquivo):\n                try:\n                    im = Image.open(diretorio + '/' + arquivo)\n                    altura = im.height\n                    im.close()",
+        "detail": "main-w",
+        "documentation": {}
+    },
+    {
+        "label": "limpeza",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def limpeza(dados, pastas):\n    totalDeletedFilesCount = 0\n    for pasta in pastas:\n        localDeletedFilesCount = 0\n        for diretorio, subpastas, arquivos in os.walk(pasta):\n            if dados.values[dados.index[dados['pasta'] == pasta].tolist()[0]][1] != len(arquivos):\n                print(f\"Pasta: {diretorio}\\nTotal de arquivos = {len(arquivos)}\")\n                for arquivo in arquivos:\n                    if not arquivo.__contains__('.encrypted') and not arquivo.__contains__('.part') and imageVerify(\n                            arquivo):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def data(pastas):\n    dados = pd.read_csv('data.csv')\n    if len(pastas) != len(dados):\n        for pasta in pastas:\n            if pasta not in dados.values:\n                dados.loc[len(dados)] = [pasta, 0]\n        print(\"Pastas adicionadas\")\n        dados.to_csv(\"data.csv\", index=False)\n    if len(dados) == 0:\n        for pasta in pastas:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "pastas",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def pastas():\n    array = [\"/mnt/chromeos/removable/Dados/aba\"]\n    array.append(\"/mnt/chromeos/removable/Jogos HDD/aba\")\n    for i in range(1, 16, 1):\n        array.append(f\"/mnt/chromeos/removable/Dados/aba{i}\")\n    return array\ndef imageVerify(name):\n    return name.__contains__(\".png\") or name.__contains__(\".png\") or name.__contains__(\".jpg\") or name.__contains__(\n        \".jpeg\") or name.__contains__(\".webp\") or name.__contains__(\".jfif\") or name.__contains__(\n        \".tiff\") or name.__contains__(\".bmp\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "imageVerify",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def imageVerify(name):\n    return name.__contains__(\".png\") or name.__contains__(\".png\") or name.__contains__(\".jpg\") or name.__contains__(\n        \".jpeg\") or name.__contains__(\".webp\") or name.__contains__(\".jfif\") or name.__contains__(\n        \".tiff\") or name.__contains__(\".bmp\")\npastas = pastas()\ndados = data(pastas)\nprint(f\"Total de arquivos deletados: {limpeza(dados, pastas)}\\n\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "pastas",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "pastas = pastas()\ndados = data(pastas)\nprint(f\"Total de arquivos deletados: {limpeza(dados, pastas)}\\n\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "dados",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "dados = data(pastas)\nprint(f\"Total de arquivos deletados: {limpeza(dados, pastas)}\\n\")",
+        "detail": "main",
+        "documentation": {}
+    }
+]
