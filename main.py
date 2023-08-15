@@ -4,7 +4,7 @@ import pandas as pd
 from PIL import Image, UnidentifiedImageError
 from PIL.Image import DecompressionBombWarning
 
-def inicializacao():
+def inicializacao(): #read the settings files
     folders = pastas()
     dados = data(folders)
     return dados, folders
