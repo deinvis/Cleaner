@@ -11,11 +11,11 @@ def inicializacao():
 
 
 def clean(dados, pastas):
-    totalDeletedFilesCount = 0
+    totalDeletedFilesCount = 0 #total deleted files in pastas
     for pasta in pastas:
-        localDeletedFilesCount = 0
+        localDeletedFilesCount = 0 #total deleted files in pasta 
         for diretorio, subpastas, arquivos in os.walk(pasta):
-            if dados.values[dados.index[dados['pasta'] == pasta].tolist()[0]][1] != len(arquivos):
+            if dados.values[dados.index[dados['pasta'] == pasta].tolist()[0]][1] != len(arquivos): 
                 print(f"Pasta: {diretorio}\nTotal de arquivos = {len(arquivos)}")
                 for arquivo in arquivos:
                     if not arquivo.__contains__('.encrypted') and not arquivo.__contains__('.part') and imageVerify(
